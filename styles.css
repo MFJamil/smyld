@@ -1,0 +1,106 @@
+/*
+Logo Colors:
+
+Blue   : 2a6099
+Green  : 127622
+Red    : f10d0c
+Yellow : e1b228
+*/
+
+@font-face{
+    font-family: "SMYLD-Digital";
+    src: url('fonts/digital-7.ttf');
+
+
+}
+
+body{
+    text-align: center;
+
+}
+
+*{
+
+    box-sizing: border-box;
+}
+    
+
+#mainPageTitle{
+    /*font-family: SMYLD-Digital;*/
+    /*font-family: Roboto, sans-serif;*/
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; 
+    font-size: 26px; 
+    font-weight: bold; 
+    line-height: 32px;
+    background-image:linear-gradient(to right, #2a6099, #f10d0c, #127622, #e1b228);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a,a:visited{
+    text-decoration: none;
+    font-family: SMYLD-Digital;
+    padding: 20px;
+    color:black;
+}
+
+a:hover{
+    color:red;
+}
+
+.app_group{
+    width: 300px;
+    box-shadow: 2px 2px 4px silver;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-weight: bold;
+    margin-left: auto; margin-right: auto;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.app_group_title{
+    font-family: Roboto, sans-serif;
+    color:#1d9add;
+    padding: 10px;
+
+
+}
+ /*
+.app_group li {
+    position: relative;
+    top: -15px;
+    
+
+
+}
+.group_icon{
+   
+    position: relative;
+    right: 150px;
+    top: -25px;
+
+}
+*/
+.app_item {
+    padding: 10px;
+}
+.group_icon{
+   
+    padding: 10px;
+
+}
+#contentsDiv{
+    margin-left: auto; margin-right: auto;
+
+}
+#contentsTable{
+    margin-left: auto; margin-right: auto;
+    text-align: center;
+    width: 80%;
+    padding-top: 40px;
+}
+#contentsTable td{
+
+}

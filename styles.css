@@ -64,9 +64,16 @@ a:hover{
     font-family: Roboto, sans-serif;
     color:#1d9add;
     padding: 10px;
-
-
 }
+
+.inProgress{
+    font-family: Roboto, sans-serif;
+    color: red;
+    padding: 10px;
+    font-size: 10px;
+}
+
+
  /*
 .app_group li {
     position: relative;

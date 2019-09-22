@@ -99,8 +99,13 @@ a:hover{
     margin-left: auto; margin-right: auto;
     text-align: center;
     width: 80%;
-    padding-top: 40px;
+    padding: 40px;
+}
+#contentsTable tr{
+    padding: 30px;
+
 }
 #contentsTable td{
+    padding: 30px;
 
 }

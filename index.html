@@ -3,6 +3,32 @@
     <head>
         <link rel='stylesheet' href='styles.css' type='text/css' />
 
+        <script>
+            
+                function showGroup(grp){
+                    console.log("Group ID : " + grp.id + " : " + grp.offsetLeft + "," + grp.offsetTop);
+                    grp.style.width ="600px";
+                    grp.style.height ="300px";
+                    var contents = grp.getElementsByTagName('span')[1];
+                    contents.style.opacity = 1;
+                    contents.style.transitionDuration = "3s";
+                }
+
+                function hideGroup(grp){
+                    console.log("Group ID : " + grp.id + " : " + grp.offsetLeft + "," + grp.offsetTop);
+                    grp.style.width ="300px";
+                    grp.style.height ="200px";
+                    var contents = grp.getElementsByTagName('span')[1];
+                    contents.style.opacity = 0;
+                    contents.style.transitionDuration = "0.5s";
+
+                }
+
+
+
+        </script>
+    
+    
     </head>
     <body>
         <div>
@@ -25,57 +51,62 @@
             <table id="contentsTable">
                 <tr>
                     <td>
-                        <div class="app_group">
+                        <div class="app_group"  onmouseover="showGroup(this);" onmouseout="hideGroup(this);">
                             <div><img src="images/tools.png" class="group_icon"></div>
                             <span class="app_group_title">Tools</span>
                             <div class="app_item">
                                 <a href="https://mfjamil.github.io/smyld-web/tools/build/spring_generator/">Spring Generator</a>
                             </div>
+                            <span class="app_group_text">For developers who needs to create a maven based full stack project that holds Spring Boot as a back-end and one of the frameworks (Angular,Vue or React) as a front-end</span>
                         </div>
                     </td>        
                     <td>
-                        <div class="app_group">
+                        <div class="app_group" onmouseover="showGroup(this);" onmouseout="hideGroup(this);">
                             <div><img src="images/angular_32.png" class="group_icon"></div>
                             <span class="app_group_title">Templates</span>
                             <div class="app_item">
                                 <a href="https://mfjamil.github.io/smyld-web/angular/templates/SMYLDSimpleExplorer">Simple Explorer</a>
                             </div>
+                            <span class="app_group_text">For Angular developers who needs a project's template to speed up their work, this template is called "Simple Explorer"</span>
                         </div>
                     </td>        
                 </tr>
                 <tr>
                     <td>
-                        <div class="app_group">
+                        <div class="app_group" onmouseover="showGroup(this);" onmouseout="hideGroup(this);">
                             <div><img src="images/java_45.png" class="group_icon"></div>
                             <span class="app_group_title">Frameworks</span>
                             <div class="app_item">
                                 <a href="https://mfjamil.github.io/smyld-java/apps/pe">Portal Engine</a>
                             </div>
-                            <span class="inProgress">In Progress</span>
+                            <span class="app_group_text">Java Based framework that creates GUI components on the fly interacting with other layers via annotations</span>
                         </div>
                     </td>        
                     <td>
-                        <div class="app_group">
+                        <div class="app_group" onmouseover="showGroup(this);" onmouseout="hideGroup(this);">
                             <div><img src="images/diagram.png" class="group_icon"></div>
                             <span class="app_group_title">Graphics</span>
                             <div class="app_item">
                                 <a href="https://mfjamil.github.io/smyld-java/apps/ep">Entity Plotter</a>
                             </div>
-                            <span class="inProgress">In Progress</span>
+                            <span class="app_group_text">Java Swing Component that holds a full animated and funcitional entity diagram like flow charts and can be extended to plot UML diagrams</span>
                         </div>
                     </td>        
                 </tr>
             </table>
         </div>
-        <!--div style="position:absolute;right:0px;bottom:0px;">
-           <h3>Impressum</h3>
+
+
+        <div class="impressumDiv">
+            <img src="images/Impressum_32.png" style="position: absolute;left:-10px;top:-10px;">
+            <h3>Impressum</h3>
             <h4>Angaben gem&auml;&szlig; &sect; 5 TMG</h4>
             <p>Mohammed Jamil</p>
-            <h2>Kontakt</h2>
-            <p>Telefon: +49 (0) 1631307791<br />
+            <h5>Kontakt</h5>
+            <p style="padding-left: 5px;">Telefon: +49 (0) 1631307791<br />
             E-Mail: mohammed.jamil@smyld.org</p>
-            <p>Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
-        </div-->
+            <p style="padding-left: 5px;">Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
+        </div>
 
     </body>
 </html>

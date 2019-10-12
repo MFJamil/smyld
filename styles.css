@@ -32,7 +32,10 @@ body{
     box-sizing: border-box;
 }
     
+#pageLogo{
+    margin-left: auto; margin-right: auto;
 
+}
 .mainPageTitle{
     font-family: SMYLD-Digital;
     /*font-family: Roboto, sans-serif;*/
@@ -40,6 +43,7 @@ body{
     font-size: 26px; 
     font-weight: bold; 
     line-height: 32px;
+    margin-left: auto; margin-right: auto;
     /*
     background-image:linear-gradient(to right, #2a6099, #f10d0c, #127622, #e1b228);
     -webkit-background-clip: text;

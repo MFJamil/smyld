@@ -2,6 +2,10 @@ var bigWindowDiv;
 var smallWindowDiv;
 var mainDiv;
 var curMode;
+var mobileMenu;
+var desktopDiv;
+var impressumDiv;
+var infoDiv;
 
 var data =[
     {
@@ -55,7 +59,8 @@ function hideGroup(grp,isSmall){
 
 }
 function smallScreen(){
-    return isMobileDevice();
+    return true;
+    //return isMobileDevice();
     /*
     if(window.innerWidth <= 800 && window.innerHeight <= 600) {
         return true;
@@ -127,36 +132,52 @@ function drawWindow(colsPerRow){
 }
 
 
-function drawBigWindowDesign(){
+function setBigWindowDesign(){
     console.log("Switching to Big window .....");
     mainDiv.replaceChild(bigWindowDiv,smallWindowDiv);
+    curMode = 'big';
+    activateModeComponents();
 }
 
-function drawSmallWindowDesign(){
+function setSmallWindowDesign(){
     console.log("Switching to Small window .....");
     mainDiv.replaceChild(smallWindowDiv,bigWindowDiv);
+    curMode = 'small';
+    activateModeComponents();
 }
 
+function activateModeComponents(){
+    if (curMode=='small'){
+        this.mobileMenu.style.visibility = 'visible';
+        this.desktopDiv.style.display = 'none';
+        this.impressumDiv.style.visibility = 'hidden';
+        this.infoDiv.style.visibility = 'hidden';
+    }else{
+        this.mobileMenu.style.visibility = 'hidden';
+        this.desktopDiv.style.display = 'block';
+        this.impressumDiv.style.visibility = 'visible';
+        this.infoDiv.style.visibility = 'visible';
 
+    }
+ }
 
 window.onresize = function(event) {
-    if (smallScreen()){
-        if (curMode=='big'){
-            drawSmallWindowDesign();
-            curMode = 'small';
-        }                    
-    }else{
-        if (curMode=='small'){
-            drawBigWindowDesign();
-            curMode = 'big';
-        }
+    if ((smallScreen())&&(curMode=='big')){
+        setSmallWindowDesign();
+    }else if ((!smallScreen())&&(curMode=='small')){
+        setBigWindowDesign();
     }
 }
 window.onload = function(event){
     bigWindowDiv = drawWindow(2);
     smallWindowDiv = drawWindow(1);
     mainDiv = document.getElementById('contentsDiv');
+    mobileMenu = document.getElementById('mobileTitleDiv');
+    desktopDiv = document.getElementById('desktopDiv');
+    infoDiv = document.getElementById('infoDiv');
+    impressumDiv = document.getElementById('impressumDiv');
     curMode = smallScreen()?'small':'big';
     mainDiv.appendChild(curMode=='big'?bigWindowDiv:smallWindowDiv);
+    this.activateModeComponents();
 }
 

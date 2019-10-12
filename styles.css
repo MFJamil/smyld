@@ -20,10 +20,6 @@ path {
 
 body{
     text-align: center;
-    /*
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 18px;
-    */
     font-size: 18px;
 }
 
@@ -32,29 +28,13 @@ body{
     box-sizing: border-box;
 }
     
-#pageLogo{
-    margin-left: auto; margin-right: auto;
-
-}
-#titleDiv{
-    margin-left: auto; margin-right: auto;
-    text-align: center;
-
-}
 
 .mainPageTitle{
     font-family: SMYLD-Digital;
-    /*font-family: Roboto, sans-serif;*/
-    /*font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol; */
     font-size: 26px; 
     font-weight: bold; 
     line-height: 32px;
     margin-left: auto; margin-right: auto;
-    /*
-    background-image:linear-gradient(to right, #2a6099, #f10d0c, #127622, #e1b228);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    */
 }
 
 a,a:visited{
@@ -141,22 +121,6 @@ a:hover{
 }
 
 
-/*
-.app_group li {
-    position: relative;
-    top: -15px;
-    
-
-
-}
-.group_icon{
-   
-    position: relative;
-    right: 150px;
-    top: -25px;
-
-}
-*/
 .app_item {
     padding: 10px;
 }
@@ -181,5 +145,25 @@ a:hover{
 }
 .contentsTable td{
     padding: 30px;
+
+}
+#mobileTitleDiv{
+    position: fixed;
+    top:0px;
+    width:100%;
+    text-align: center;
+    height: 60px;
+    background-color: #4267b2;
+    left: 0px;
+
+}
+
+#pageLogo{
+    margin-left: auto; margin-right: auto;
+
+}
+#desktopDiv{
+    margin-left: auto; margin-right: auto;
+    text-align: center;
 
 }

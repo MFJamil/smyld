@@ -41,7 +41,6 @@ var data =[
 
 
 function showGroup(grp,isSmall){
-    //console.log("Group ID : " + grp.id + " : " + grp.offsetLeft + "," + grp.offsetTop);
     grp.style.width  = (isSmall?"300px":"600px");
     grp.style.height = (isSmall?"300px":"300px");
     var contents = grp.getElementsByTagName('span')[1];
@@ -50,7 +49,6 @@ function showGroup(grp,isSmall){
 }
 
 function hideGroup(grp,isSmall){
-    //console.log("Group ID : " + grp.id + " : " + grp.offsetLeft + "," + grp.offsetTop);
     grp.style.width  = (isSmall?"300px":"300px");
     grp.style.height = (isSmall?"200px":"200px");
     var contents = grp.getElementsByTagName('span')[1];
@@ -59,8 +57,8 @@ function hideGroup(grp,isSmall){
 
 }
 function smallScreen(){
-    return true;
-    //return isMobileDevice();
+    //return true;
+    return isMobileDevice();
     /*
     if(window.innerWidth <= 800 && window.innerHeight <= 600) {
         return true;

@@ -36,6 +36,12 @@ body{
     margin-left: auto; margin-right: auto;
 
 }
+#titleDiv{
+    margin-left: auto; margin-right: auto;
+    text-align: center;
+
+}
+
 .mainPageTitle{
     font-family: SMYLD-Digital;
     /*font-family: Roboto, sans-serif;*/

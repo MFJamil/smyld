@@ -20,7 +20,10 @@ path {
 
 body{
     text-align: center;
+    /*
     font-family: 'Luckiest Guy', cursive;
+    font-size: 18px;
+    */
     font-size: 18px;
 }
 
@@ -37,9 +40,11 @@ body{
     font-size: 26px; 
     font-weight: bold; 
     line-height: 32px;
+    /*
     background-image:linear-gradient(to right, #2a6099, #f10d0c, #127622, #e1b228);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    */
 }
 
 a,a:visited{

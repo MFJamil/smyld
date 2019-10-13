@@ -10,7 +10,10 @@ var infoMBDiv;
 var infoContentsDiv;
 var impressumDTDiv;
 var impressumMBDiv;
-var impressumContentsDiv
+var impressumContentsDiv;
+var isInfoVisible = false;
+var isImpressumVisible = false;
+
 
 var data =[
     {
@@ -162,6 +165,24 @@ function activateModeComponents(){
         this.infoDTDiv.style.visibility = 'visible';
 
     }
+ }
+
+ function toggleMBInfo(){
+    if (isInfoVisible){
+        hideMBInfo();
+    }else{
+        showMBInfo();
+    }
+    isInfoVisible = !isInfoVisible;
+ }
+
+ function toggleMBImpressum(){
+    if (isImpressumVisible){
+        hideMBImpressum();
+    }else{
+        showMBImpressum();
+    }
+    isImpressumVisible = !isImpressumVisible;
  }
 
  function showMBInfo(){

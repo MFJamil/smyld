@@ -4,8 +4,13 @@ var mainDiv;
 var curMode;
 var mobileMenu;
 var desktopDiv;
-var impressumDiv;
-var infoDiv;
+
+var infoDTDiv;
+var infoMBDiv;
+var infoContentsDiv;
+var impressumDTDiv;
+var impressumMBDiv;
+var impressumContentsDiv
 
 var data =[
     {
@@ -57,8 +62,8 @@ function hideGroup(grp,isSmall){
 
 }
 function smallScreen(){
-    //return true;
-    return isMobileDevice();
+    return true;
+    //return isMobileDevice();
     /*
     if(window.innerWidth <= 800 && window.innerHeight <= 600) {
         return true;
@@ -148,18 +153,38 @@ function activateModeComponents(){
     if (curMode=='small'){
         this.mobileMenu.style.visibility = 'visible';
         this.desktopDiv.style.display = 'none';
-        this.impressumDiv.style.visibility = 'hidden';
-        this.infoDiv.style.visibility = 'hidden';
+        this.impressumDTDiv.style.visibility = 'hidden';
+        this.infoDTDiv.style.visibility = 'hidden';
     }else{
         this.mobileMenu.style.visibility = 'hidden';
         this.desktopDiv.style.display = 'block';
-        this.impressumDiv.style.visibility = 'visible';
-        this.infoDiv.style.visibility = 'visible';
+        this.impressumDTDiv.style.visibility = 'visible';
+        this.infoDTDiv.style.visibility = 'visible';
 
     }
  }
 
-window.onresize = function(event) {
+ function showMBInfo(){
+    this.infoMBDiv.style.top = '0px';
+    this.infoMBDiv.style.left = '0px';
+ }
+
+ function hideMBInfo(){
+    this.infoMBDiv.style.top = '-300px';
+    this.infoMBDiv.style.left = '-280px';
+ }
+
+ function showMBImpressum(){
+    this.impressumMBDiv.style.top = '0px';
+    this.impressumMBDiv.style.right = '0px';
+ }
+
+ function hideMBImpressum(){
+    this.impressumMBDiv.style.top = '-300px';
+    this.impressumMBDiv.style.right = '-280px';
+ }
+
+ window.onresize = function(event) {
     if ((smallScreen())&&(curMode=='big')){
         setSmallWindowDesign();
     }else if ((!smallScreen())&&(curMode=='small')){
@@ -167,15 +192,31 @@ window.onresize = function(event) {
     }
 }
 window.onload = function(event){
+    // Creating elements
     bigWindowDiv = drawWindow(2);
     smallWindowDiv = drawWindow(1);
+    // Reading elements
     mainDiv = document.getElementById('contentsDiv');
     mobileMenu = document.getElementById('mobileTitleDiv');
     desktopDiv = document.getElementById('desktopDiv');
-    infoDiv = document.getElementById('infoDiv');
-    impressumDiv = document.getElementById('impressumDiv');
+    infoDTDiv = document.getElementById('infoDTDiv');
+    infoMBDiv = document.getElementById('infoMBDiv');
+    infoContentsDiv = document.getElementById('infoDiv');
+    impressumDTDiv = document.getElementById('impressumDTDiv');
+    impressumMBDiv = document.getElementById('impressumMBDiv');
+    impressumContentsDiv = document.getElementById('impressumDiv');
+    // Start processing
     curMode = smallScreen()?'small':'big';
     mainDiv.appendChild(curMode=='big'?bigWindowDiv:smallWindowDiv);
+    impressumContentsDiv.style.display='block';
+    impressumDTDiv.replaceChild(this.impressumContentsDiv,impressumDTDiv.children[1]);
+    impressumMBDiv.replaceChild(this.impressumContentsDiv.cloneNode(true),impressumMBDiv.children[0]);
+
+    infoContentsDiv.style.display='block';
+    infoDTDiv.replaceChild(this.infoContentsDiv,infoDTDiv.children[1]);
+    infoMBDiv.replaceChild(this.infoContentsDiv.cloneNode(true),infoMBDiv.children[0]);
+
+
     this.activateModeComponents();
 }
 

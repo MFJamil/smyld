@@ -12,10 +12,27 @@
         </div>
     
         <div id="contentsDiv" class="contentsDiv"></div>
+        
+        <div id="impressumDTDiv" class="impressumDTDiv">
+            <img src="images/Impressum_32.png" style="position: absolute;left:-15px;top:-35px;">
+            <div id="contents"></div>
+        </div>
 
-
-        <div id="impressumDiv" class="impressumDiv">
-            <img src="images/Impressum_32.png" style="position: absolute;left:-10px;top:-10px;">
+        <div id="infoDTDiv" class="infoDTDiv">
+            <img src="images/info_32.png" style="position: absolute;right:-15px;top:-35px;">
+            <div id="contents"></div>
+        </div>
+            
+        <div id="infoMBDiv" class="infoMBDiv">
+                <div id="contents"></div>
+        </div>
+        <div id="impressumMBDiv" class="impressumMBDiv">
+                <div id="contents"></div>
+        </div>
+ 
+        
+        
+        <div id="impressumDiv" style="display: none;">
             <h3>Impressum</h3>
             <h4>Angaben gem&auml;&szlig; &sect; 5 TMG</h4>
             <p>Mohammed Jamil</p>
@@ -23,20 +40,20 @@
             <p style="padding-left: 5px;">Telefon: +49 (0) 1631307791<br />
             E-Mail: mohammed.jamil@smyld.org</p>
             <p style="padding-left: 5px;">Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
-        </div>
+        </div>  
 
-        <div id="infoDiv" class="infoDiv">
-            <img src="images/info_32.png" style="position: absolute;right:-15px;top:-35px;">
+        <div id="infoDiv" style="display: none;">
             <h3>Our Target</h3>
             <h4>Open Source Projects</h4>
             <p>For Developers to use them and/or to extend them </p>
             <p>We will be more than happy with your help and creative ideas</p>
             <p>Together we can do something</p>
         </div>
+    
         <div id="mobileTitleDiv">
             <img src="images/smyld_100.png" style="top: -5px;position: relative;" >
-            <img src="images/info_32.png" style="left: 15px;top:15px; position: absolute;cursor: pointer;" >
-            <img src="images/Impressum_32.png" style="right: 15px;top:15px; position: absolute;cursor: pointer;" >
+            <img src="images/info_32.png" style="left: 15px;top:15px; position: absolute;cursor: pointer;" onmouseover="showMBInfo();" onmouseout="hideMBInfo();">
+            <img src="images/Impressum_32.png" style="right: 15px;top:15px; position: absolute;cursor: pointer;" onmouseover="showMBImpressum();" onmouseout="hideMBImpressum();">
 
         </div>
 

@@ -62,8 +62,8 @@ function hideGroup(grp,isSmall){
 
 }
 function smallScreen(){
-    return true;
-    //return isMobileDevice();
+    //return true;
+    return isMobileDevice();
     /*
     if(window.innerWidth <= 800 && window.innerHeight <= 600) {
         return true;

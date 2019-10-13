@@ -64,15 +64,14 @@ function hideGroup(grp,isSmall){
     contents.style.transitionDuration = "0.5s";
 
 }
+
 function smallScreen(){
-    //return true;
-    return isMobileDevice();
-    /*
+    if (isMobileDevice()) return true;
     if(window.innerWidth <= 800 && window.innerHeight <= 600) {
         return true;
     } else {
         return false;
-    }*/
+    }
 }
 
 function isMobileDevice() {
@@ -158,11 +157,16 @@ function activateModeComponents(){
         this.desktopDiv.style.display = 'none';
         this.impressumDTDiv.style.visibility = 'hidden';
         this.infoDTDiv.style.visibility = 'hidden';
+        this.impressumMBDiv.style.visibility = 'visible';
+        this.infoMBDiv.style.visibility = 'visible';
+
     }else{
         this.mobileMenu.style.visibility = 'hidden';
         this.desktopDiv.style.display = 'block';
         this.impressumDTDiv.style.visibility = 'visible';
         this.infoDTDiv.style.visibility = 'visible';
+        this.impressumMBDiv.style.visibility = 'hidden';
+        this.infoMBDiv.style.visibility = 'hidden';
 
     }
  }

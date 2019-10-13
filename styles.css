@@ -110,6 +110,7 @@ a:hover{
     width: 310px;
     height: 305px;
     top:-300px;
+    visibility: hidden;
     left:-280px;
     background-color: white;
     border:2px solid #eee;
@@ -123,6 +124,7 @@ a:hover{
     height: 330px;
     top:-300px;
     right:-280px;
+    visibility: hidden;
     background-color: white;
     border:2px solid #eee;
     border-radius: 0px 0px 0px 15px; 

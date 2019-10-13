@@ -92,6 +92,7 @@ a:hover{
     bottom:-300px;
     right:-280px;
     height: 300px;
+    visibility: hidden;
     transition-duration: 1s;
 }
 
@@ -135,6 +136,7 @@ a:hover{
     height: 300px;
     bottom:-300px;
     left:-280px;
+    visibility: hidden;
     transition-duration: 1s;
 }
 

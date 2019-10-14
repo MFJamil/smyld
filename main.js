@@ -1,21 +1,7 @@
-var bigWindowDiv;
-var smallWindowDiv;
-var mainDiv;
-var curMode;
-var mobileMenu;
-var desktopDiv;
+var bigWindowDiv,smallWindowDiv,mainDiv,curMode,mobileMenu,desktopDiv,infoDTDiv,infoMBDiv,infoContentsDiv,impressumDTDiv,impressumMBDiv,impressumContentsDiv;
+var isInfoVisible = isImpressumVisible = false;
 
-var infoDTDiv;
-var infoMBDiv;
-var infoContentsDiv;
-var impressumDTDiv;
-var impressumMBDiv;
-var impressumContentsDiv;
-var isInfoVisible = false;
-var isImpressumVisible = false;
-
-
-var data =[
+const data =[
     {
         'title':'Tools',
         'icon' : 'tools.png',
@@ -47,95 +33,48 @@ var data =[
 
     ];
 
-
-function showGroup(grp,isSmall){
-    grp.style.width  = (isSmall?"300px":"600px");
-    grp.style.height = (isSmall?"300px":"300px");
-    var contents = grp.getElementsByTagName('span')[1];
-    contents.style.opacity = 1;
-    contents.style.transitionDuration = "3s";
-}
-
-function hideGroup(grp,isSmall){
-    grp.style.width  = (isSmall?"300px":"300px");
-    grp.style.height = (isSmall?"200px":"200px");
-    var contents = grp.getElementsByTagName('span')[1];
-    contents.style.opacity = 0;
-    contents.style.transitionDuration = "0.5s";
-
+function toggleGroup(grp,isSmall){
+    grp.classList.toggle(`app_group_ext_${isSmall?'small':'big'}`);
+    (grp.getElementsByTagName('span')[1]).classList.toggle('app_group_text_show'); 
 }
 
 function smallScreen(){
     if (isMobileDevice()) return true;
-    if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-        return true;
-    } else {
-        return false;
-    }
+    return (window.innerWidth <= 800 && window.innerHeight <= 600);
 }
 
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 }
 
-function drawWindow(colsPerRow){
-    var mainDiv = document.getElementById('contentsDiv');
-    //mainDiv.innerHTML = "Big Window !!!";
-    
-    var tableEl = document.createElement("table");   
+/**
+ * Below Code is written using the new EMACScript 9
+ */
+function drawWindowNew(colsPerRow){
+    const tableEl = document.createElement("table");   
     tableEl.setAttribute('class','contentsTable');
-    var rows = data.length / colsPerRow;
-    var dataIndex = 0; 
-    for(r=0;r<rows;r++){
-        var rowEl =  document.createElement("tr");
-        for (c=0; c<colsPerRow;c++){
-            var colEl =  document.createElement("td");        
-            /*
-            <td>
-                <div class="app_group"  onmouseover="showGroup(this);" onmouseout="hideGroup(this);">
-                    <div><img src="images/tools.png" class="group_icon"></div>
-                    <span class="app_group_title">Tools</span>
-                    <div class="app_item">
-                        <a href="https://mfjamil.github.io/smyld-web/tools/build/spring_generator/">Spring Generator</a>
-                    </div>
-                    <span class="app_group_text">For developers who needs to create a maven based full stack project that holds Spring Boot as a back-end and one of the frameworks (Angular,Vue or React) as a front-end</span>
-                </div>
-            </td>        
-            */
-            var div1 = document.createElement("div");
-                div1.setAttribute('class','app_group');
-                div1.setAttribute('onmouseover','showGroup(this,' + (colsPerRow==1?'true':'false') + ');');
-                div1.setAttribute('onmouseout','hideGroup(this,' + (colsPerRow==1?'true':'false') + ');');
-                var div2 = document.createElement("div");
-                var img1 = document.createElement("img");
-                    img1.setAttribute('src','images/' + data[dataIndex].icon);
-                    img1.setAttribute('class','group_icon');
-                    div2.appendChild(img1);
-                    div1.appendChild(div2);
-                var span1 = document.createElement("span");
-                    span1.setAttribute('class','app_group_title');
-                    span1.innerHTML= data[dataIndex].title;
-                    div1.appendChild(span1);
-                var div3 = document.createElement("div");
-                    div3.setAttribute('class','app_item');
-                    var link = document.createElement("a");
-                        link.setAttribute('href',data[dataIndex].link);
-                        link.innerHTML = data[dataIndex].name;
-                    div3.appendChild(link);
-                    div1.appendChild(div3);
-                var span2 = document.createElement("span");    
-                    span2.setAttribute('class','app_group_text');
-                    span2.innerHTML= data[dataIndex].text;
-                    div1.appendChild(span2);
-            colEl.appendChild(div1);    
-            rowEl.appendChild(colEl);
-            dataIndex++; 
-        }
+    const rows = data.length / colsPerRow;
+    let dataIndex = 0; 
+    Array(rows).fill(1).map(i => {
+        const rowEl =  document.createElement("tr");
+        Array(colsPerRow).fill(1).map(j => {
+            rowEl.insertAdjacentHTML('beforeend',
+            `<td>
+                  <div class="app_group"  onmouseover="toggleGroup(this,${(colsPerRow==1).toString()});" onmouseout="toggleGroup(this,${(colsPerRow==1).toString()});">
+                      <div><img src="images/${data[dataIndex].icon}" class="group_icon"></div>
+                      <span class="app_group_title">${data[dataIndex].title}</span>
+                      <div class="app_item">
+                          <a href="${data[dataIndex].link}">${data[dataIndex].name}</a>
+                      </div>
+                      <span class="app_group_text">${data[dataIndex].text}</span>
+                  </div>
+              </td>`);
+              dataIndex++; 
+        });
         tableEl.appendChild(rowEl);
-    }
+    });
     return tableEl;
 }
-
 
 function setBigWindowDesign(){
     console.log("Switching to Big window .....");
@@ -172,54 +111,25 @@ function activateModeComponents(){
  }
 
  function toggleMBInfo(){
-    if (isInfoVisible){
-        hideMBInfo();
-    }else{
-        showMBInfo();
-    }
-    isInfoVisible = !isInfoVisible;
+    this.infoMBDiv.classList.toggle('infoMBDiv_Show');
  }
 
  function toggleMBImpressum(){
-    if (isImpressumVisible){
-        hideMBImpressum();
-    }else{
-        showMBImpressum();
-    }
-    isImpressumVisible = !isImpressumVisible;
+    this.impressumMBDiv.classList.toggle('impressumMBDiv_Show');
  }
 
- function showMBInfo(){
-    this.infoMBDiv.style.top = '0px';
-    this.infoMBDiv.style.left = '0px';
- }
-
- function hideMBInfo(){
-    this.infoMBDiv.style.top = '-300px';
-    this.infoMBDiv.style.left = '-280px';
- }
-
- function showMBImpressum(){
-    this.impressumMBDiv.style.top = '0px';
-    this.impressumMBDiv.style.right = '0px';
- }
-
- function hideMBImpressum(){
-    this.impressumMBDiv.style.top = '-300px';
-    this.impressumMBDiv.style.right = '-280px';
- }
-
- window.onresize = function(event) {
+window.onresize = function(event) {
     if ((smallScreen())&&(curMode=='big')){
         setSmallWindowDesign();
     }else if ((!smallScreen())&&(curMode=='small')){
         setBigWindowDesign();
     }
 }
+
 window.onload = function(event){
     // Creating elements
-    bigWindowDiv = drawWindow(2);
-    smallWindowDiv = drawWindow(1);
+    bigWindowDiv = this.drawWindowNew(2);
+    smallWindowDiv = this.drawWindowNew(1);
     // Reading elements
     mainDiv = document.getElementById('contentsDiv');
     mobileMenu = document.getElementById('mobileTitleDiv');
@@ -236,12 +146,9 @@ window.onload = function(event){
     impressumContentsDiv.style.display='block';
     impressumDTDiv.replaceChild(this.impressumContentsDiv,impressumDTDiv.children[1]);
     impressumMBDiv.replaceChild(this.impressumContentsDiv.cloneNode(true),impressumMBDiv.children[0]);
-
     infoContentsDiv.style.display='block';
     infoDTDiv.replaceChild(this.infoContentsDiv,infoDTDiv.children[1]);
     infoMBDiv.replaceChild(this.infoContentsDiv.cloneNode(true),infoMBDiv.children[0]);
-
-
     this.activateModeComponents();
 }
 

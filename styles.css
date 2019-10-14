@@ -13,6 +13,8 @@ Yellow : e1b228
 
 
 }
+
+
 path {
     fill: transparent;
   }
@@ -62,6 +64,16 @@ a:hover{
     transition-duration: 1s;
 }
 
+.app_group_ext_big{
+    width: 600px;
+    height: 300px;
+}
+
+.app_group_ext_small{
+    width: 300px;
+    height: 300px;
+}
+
 .app_group_title{
     font-family: Roboto, sans-serif;
     color:#1d9add;
@@ -74,17 +86,26 @@ a:hover{
     padding: 10px;
     font-size: 12px;
 }
+
+
+
 .app_group_text{
     top:50px;
     width:500px;
     height: 400px;
     opacity: 0;
-    transition-duration: 3s;
+    transition-duration: 0.5s;
     font-family: Roboto, sans-serif;
     color: red;
     padding: 10px;
     font-size: 12px;
 }
+
+.app_group_text_show{
+    opacity: 1;
+    transition-duration: 3s;
+}
+
 
 .impressumDTDiv{
     position: fixed;
@@ -118,6 +139,11 @@ a:hover{
     transition-duration: 1s;
 }
 
+.infoMBDiv_Show{
+    top:0px;
+    left:0px;
+}
+
 .impressumMBDiv{
     position: fixed;
     width: 300px;
@@ -131,7 +157,10 @@ a:hover{
     transition-duration: 1s;
 }
 
-
+.impressumMBDiv_Show{
+    top:0px;
+    right:0px;
+}
 .infoDTDiv{
     position: fixed;
     width: 300px;
@@ -177,6 +206,8 @@ a:hover{
     padding: 30px;
 
 }
+
+
 #mobileTitleDiv{
     position: fixed;
     top:0px;

@@ -21,7 +21,7 @@
             
             <div id="contentsDiv" class="contentsDiv">
                 <!--<projectsContainer />-->
-                <box v-for="proj in list">
+                <box v-for="proj in list" :target="proj.link">
                     <div slot="front" style="padding-top: 25px;">
                         <div ><img :src="proj.icon" class="group_icon"></div>
                         <span class="app_group_title">{{proj.title}}</span>

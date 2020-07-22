@@ -16,8 +16,9 @@ Vue.component('todo-item', {
 
         }
       },
+      props:["target"],
       
-    template: '<div class="scene">'+
+    template: '<div class="scene" @mousedown="openLink()">'+
                     '<div ref="mainBox" class="box" @mouseover="doMove" @mouseout="getback">'+
                         '<div class="box__face box__face--front"><slot name="front"></slot></div>'+
                         '<div class="box__face box__face--back"><slot name="back"></slot></div>'+
@@ -32,8 +33,9 @@ Vue.component('todo-item', {
         mounted(){
             console.log("Mounted ..... ");
         },
-        openLink(linkUrl){
-          console.log(linkUrl);
+        openLink(){
+          console.log(this.target);
+          window.location.href = this.target;
 
         },
         doMove(){

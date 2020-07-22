@@ -154,7 +154,7 @@ window.onload = function(event){
 function handleHiddenTricks(){
     console.log("Key Pressed : " + event.keyCode);
     if (event.keyCode==32){
-        window.location = "https://mfjamil.github.io/smyld/box";
+        window.location = "https://mfjamil.github.io/smyld/box/box.html";
     }
 }
 

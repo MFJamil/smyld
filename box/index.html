@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <link rel='stylesheet' href='css/styles.css' type='text/css' />
+        <link rel='stylesheet' href='css/box.css' type='text/css' />
+        <link rel="icon" href="images/smyld_45.png">
+        <meta name='viewport' content='width=device-width, initial-scale=1'></meta>
+
+    </head>
+    
+    <body>
+        <div id="app"  style="width: 100%;height: 100%;">
+
+            <div id="desktopDiv">
+                    <img id="pageLogo" src="images/smyld_200.png">
+                    <h1 class="mainPageTitle">Software Projects</h1>
+            </div>
+
+            
+            <div id="contentsDiv" class="contentsDiv">
+                <!--<projectsContainer />-->
+                <box v-for="proj in list">
+                    <div slot="front" style="padding-top: 25px;">
+                        <div ><img :src="proj.icon" class="group_icon"></div>
+                        <span class="app_group_title">{{proj.title}}</span>
+                        <div class="app_item">
+                            <a :href="proj.link">{{proj.name}}</a>
+                        </div>
+                        
+                    </div>
+                    <div slot="right" style="width:100%;height:100%;font-size: 14px;text-align: center; word-wrap: break-word;padding-top: 30px;">
+                        <span class="app_group_text"  >{{proj.text}}</span>
+                    </div>
+                </box>
+    
+            </div>
+            
+            <div id="impressumDTDiv" class="impressumDTDiv">
+                <img src="images/Impressum_32.png" style="position: absolute;left:-15px;top:-35px;">
+                <div id="contents"></div>
+            </div>
+
+            <div id="infoDTDiv" class="infoDTDiv">
+                <img src="images/info_32.png" style="position: absolute;right:-15px;top:-35px;">
+                <div id="contents"></div>
+            </div>
+                
+            <div id="infoMBDiv" class="infoMBDiv">
+                    <div id="contents"></div>
+            </div>
+            <div id="impressumMBDiv" class="impressumMBDiv">
+                    <div id="contents"></div>
+            </div>
+            
+            <div id="impressumDiv" style="display: none;">
+                <h3>Impressum</h3>
+                <h4>Angaben gem&auml;&szlig; &sect; 5 TMG</h4>
+                <p>Mohammed Jamil</p>
+                <h5>Kontakt</h5>
+                <p style="padding-left: 5px;">Telefon: +49 (0) 1631307791<br />
+                E-Mail: mohammed.jamil@smyld.org</p>
+                <p style="padding-left: 5px;">Quelle: <a href="https://www.e-recht24.de">e-recht24.de</a></p>
+            </div>  
+
+            <div id="infoDiv" style="display: none;">
+                <h3>Our Target</h3>
+                <h4>Open Source Projects</h4>
+                <p>For Developers to use them and/or to extend them </p>
+                <p>We will be more than happy with your help and creative ideas</p>
+                <p>Together we can do something</p>
+            </div>
+    
+        </div>
+        
+        <script src="scripts/vue.js"></script>
+        <script src='scripts/vueMain.js'></script>
+        <script src='scripts/app.js'></script>
+
+
+    </body>
+</html>

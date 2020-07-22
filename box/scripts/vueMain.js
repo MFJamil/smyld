@@ -9,7 +9,7 @@ Vue.component('todo-item', {
         '</div>'
   })
   */
- Vue.component('Box', {
+ Vue.component('box', {
     data(){
         return{
           curFace:"show-front",
@@ -31,6 +31,10 @@ Vue.component('todo-item', {
     methods:{
         mounted(){
             console.log("Mounted ..... ");
+        },
+        openLink(linkUrl){
+          console.log(linkUrl);
+
         },
         doMove(){
             //console.log("Do move");
@@ -63,10 +67,3 @@ Vue.component('todo-item', {
   })
 
   
-var app = new Vue({
-    el: '#app',
-    data: {
-      message: 'You loaded this page on ' + new Date().toLocaleString()
-    },
-
-  })

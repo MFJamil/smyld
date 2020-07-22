@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vue Tester</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+</head>
+<body>
+    <div id="app" style="width: 100%;height: 100%;">
+        <div style="position:absolute;top: 50px;left: 100px;">
+            <Box>
+                <div slot="top">On Top</div>
+                <div slot="front">
+                    <p style="font-size: 10px;">Ich wollte etwas machen mit diesem Box ....</p>
+                </div>
+                <div slot="right">Mudy</div>
+            </Box>
+        </div>
+        <div  style="position:absolute;top: 50px;left: 500px;display: inline;">
+            <Box>
+                <div slot="top">T2</div>
+                <div slot="front"><img  src="images/smyld_200.png"></div>
+                <div slot="right">Yusra</div>
+            </Box>
+        </div>
+        <div  style="position:absolute;top: 50px;left: 900px;display: inline;">
+            <Box>
+                <div slot="top">T2</div>
+                <div slot="front" style="width:100%;height:100%;font-size: 14px;text-align: center; word-wrap: break-word;border: 1px solid black;">
+                    <p>Eine der SMYLD Produkte sinde diesem Box komponent bla bla bla </p>
+                    <img style="width: 100px;height:70px;" src="images/smyld_200.png"></div>
+                <div slot="right"><img style="width: 100px;height:70px;" src="images/smyld_200.png"></div>
+            </Box>
+        </div>
+
+    </div>
+    <script src="scripts/vue.js"></script>
+    <script src='scripts/vueMain.js'></script>
+</body>
+</html>

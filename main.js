@@ -151,4 +151,14 @@ window.onload = function(event){
     infoMBDiv.replaceChild(this.infoContentsDiv.cloneNode(true),infoMBDiv.children[0]);
     this.activateModeComponents();
 }
+function handleHiddenTricks(){
+    console.log("Key Pressed : " + event.keyCode);
+    if (event.keyCode==32){
+        window.location = "https://mfjamil.github.io/smyld/box";
+    }
+}
+
+window.onkeydown = function(){
+    handleHiddenTricks();
+}
 

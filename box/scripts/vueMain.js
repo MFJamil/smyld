@@ -22,7 +22,7 @@ Vue.component('todo-item', {
                     '<div ref="mainBox" class="box" @mouseover="doMove" @mouseout="getback">'+
                         '<div class="box__face box__face--front"><slot name="front"></slot></div>'+
                         '<div class="box__face box__face--back"><slot name="back"></slot></div>'+
-                        '<div class="box__face box__face--right"><slot name="right"></slot></div>'+
+                        '<div  ref="linkFace" class="box__face box__face--right"><slot name="right"></slot></div>'+
                         '<div class="box__face box__face--left"><slot name="left"></slot></div>'+
                         '<div class="box__face box__face--top"><slot name="top"></slot></div>'+
                         '<div class="box__face box__face--bottom"><slot name="bottom"></slot></div>'+
@@ -35,7 +35,12 @@ Vue.component('todo-item', {
         },
         openLink(){
           console.log(this.target);
+          var target = this.$refs.linkFace;
+          target.classList.add( "selectedLink" );
+
           window.location.href = this.target;
+
+          
 
         },
         doMove(){

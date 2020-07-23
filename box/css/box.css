@@ -40,6 +40,10 @@
   
 }
 
+.selectedLink{
+  background: hsla(234, 87%, 43%, 0.4); 
+}
+
 .box__face--front,
 .box__face--back {
   width: 200px;

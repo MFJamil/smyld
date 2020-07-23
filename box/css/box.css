@@ -67,9 +67,9 @@
 }
 
 .box__face--front  { background: rgb(256, 256, 256); }
-.box__face--right  { background: rgba(13, 52, 182, 0.7); }
+.box__face--right  { background: rgba(13, 52, 182, 0.9); }
 .box__face--back   { background: hsla(234, 87%, 43%, 0.7); }
-.box__face--left   { background: rgba(13, 52, 182, 0.7); }
+.box__face--left   { background: rgba(13, 52, 182, 0.9); }
 .box__face--top    { background: hsla(240, 100%, 50%, 0.7); }
 .box__face--bottom { background: hsla(231, 76%, 50%, 0.7); }
 

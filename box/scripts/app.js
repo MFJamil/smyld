@@ -4,28 +4,39 @@ const projects =[
         'icon' : 'images/tools.png',
         'name':'Spring Generator',
         'link': 'https://mfjamil.github.io/smyld-web/tools/build/spring_generator/',
-        'text': 'For developers who needs to create a maven based full stack project that holds Spring Boot as a back-end and one of the frameworks (Angular,Vue or React) as a front-end'
+        'text': 'For developers who needs to create a maven based full stack project that holds Spring Boot as a back-end and one of the frameworks (Angular,Vue or React) as a front-end',
+        'x'   : '10%',
+        'y'   : '20%'
     },
     {
         'title': 'Templates',
         'icon' : 'images/angular_32.png',
         'name' : 'Simple Explorer',
         'link' : 'https://mfjamil.github.io/smyld-web/angular/templates/SMYLDSimpleExplorer',
-        'text' : 'For Angular developers who needs a project\'s template to speed up their work, this template is called "Simple Explorer"'
+        'text' : 'For Angular developers who needs a project\'s template to speed up their work, this template is called "Simple Explorer"',
+        'x'   : '20%',
+        'y'   : '60%'
+
     },
     {
         'title': 'Frameworks',
         'icon' : 'images/java_45.png',
         'name' : 'Portal Engine',
         'link' : 'https://mfjamil.github.io/smyld-java/apps/pe',
-        'text' : 'Java Based framework that creates GUI components on the fly which interact with other layers via annotations'
+        'text' : 'Java Based framework that creates GUI components on the fly which interact with other layers via annotations',
+        'x'   : '60%',
+        'y'   : '60%'
+
     },
     {
         'title': 'Graphics',
         'icon' : 'images/diagram.png',
         'name' : 'Entity Plotter',
         'link' : 'https://mfjamil.github.io/smyld-java/apps/ep',
-        'text' : 'Java Swing Component that holds a full animated and funcitional entity diagram like flow charts and can be extended to plot UML diagrams'
+        'text' : 'Java Swing Component that holds a full animated and funcitional entity diagram like flow charts and can be extended to plot UML diagrams',
+        'x'   : '70%',
+        'y'   : '20%'
+
     }
 
     ];

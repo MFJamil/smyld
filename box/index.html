@@ -14,7 +14,8 @@
                background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: cover;
-}
+                overflow: hidden;
+
             }
 
          </style>
@@ -24,17 +25,21 @@
         <div id="app"  style="width: 100%;height: 100%;">
 
             <div id="desktopDiv">
+                <!--
                     <img id="pageLogo" src="images/smyld_200.png">
                     <h1 class="mainPageTitle">Software Projects</h1>
-                    <img src="images/2d_icon.jpg" style="opacity: 0.4;cursor:pointer;width: 50px;height:50px;box-shadow: 2px 4px 8px silver;" onmousedown="window.location.href='../index.html'">
-                    <img src="images/3d-icon2.png" style="opacity: 1;position: relative; cursor:pointer;width: 60px;height:60px;left:10px;top:8px;" onmousedown="window.location.href='box/index.html'">
-    
+                    
+                --> 
+                <div style="top:150px;position: absolute;width: 100%;">
+                    <img src="images/2d_icon.jpg" style=" opacity: 0.4;cursor:pointer;width: 50px;height:50px;box-shadow: 2px 4px 8px silver;" onmousedown="window.location.href='../index.html'">
+                    <img src="images/3d-icon2.png" style="opacity: 1;position: relative; cursor:pointer;width: 60px;height:60px;left:10px;top:8px;" >
+                </div>     
             </div>
 
             
             <div id="contentsDiv" class="contentsDiv">
                 <!--<projectsContainer />-->
-                <box v-for="proj in list" :target="proj.link">
+                <box v-for="proj in list" :target="proj.link" :style="`position:absolute;left:${proj.x};top:${proj.y};`">
                     <div slot="front" style="padding-top: 25px;">
                         <div ><img :src="proj.icon" class="group_icon"></div>
                         <span class="app_group_title">{{proj.title}}</span>

@@ -108,6 +108,7 @@ a:hover{
 
 
 .impressumDTDiv{
+    cursor: zoom-in;
     position: fixed;
     width: 300px;
     bottom:-300px;
@@ -117,7 +118,8 @@ a:hover{
     transition-duration: 1s;
 }
 
-.impressumDTDiv:hover{
+.impressumDTDiv_Visible{
+    cursor: zoom-out;
     position: fixed;
     width: 300px;
     height: 300px;
@@ -162,6 +164,7 @@ a:hover{
     right:0px;
 }
 .infoDTDiv{
+    cursor: zoom-in;
     position: fixed;
     width: 300px;
     height: 300px;
@@ -171,7 +174,8 @@ a:hover{
     transition-duration: 1s;
 }
 
-.infoDTDiv:hover{
+.infoDTDiv_Visible{
+    cursor: zoom-out;
     position: fixed;
     width: 300px;
     left:0px;

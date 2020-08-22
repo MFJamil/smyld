@@ -126,6 +126,18 @@ window.onresize = function(event) {
     }
 }
 
+
+function doShowElement(className){
+    let el = document.getElementById(className);
+    el.classList.toggle(className+'_Visible');
+}
+
+function doHideElement(className){
+    let el = document.getElementById(className);
+    el.classList.toggle(className);
+
+}
+
 window.onload = function(event){
     // Creating elements
     bigWindowDiv = this.drawWindowNew(2);

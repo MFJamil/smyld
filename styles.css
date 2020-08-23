@@ -116,6 +116,11 @@ a:hover{
     height: 300px;
     visibility: hidden;
     transition-duration: 1s;
+    box-shadow: 2px 2px 4px silver;
+    background-color: lightgray;
+    border-top-left-radius: 25px;
+
+
 }
 
 .impressumDTDiv_Visible{
@@ -124,8 +129,14 @@ a:hover{
     width: 300px;
     height: 300px;
     right:0px;
-    bottom:10px;
+    bottom:0px;
     transition-duration: 1s;
+}
+
+.impressumDTDiv_Visible img{
+    left:10px !important;
+    top:20px !important;
+
 }
 
 .infoMBDiv{
@@ -163,6 +174,8 @@ a:hover{
     top:0px;
     right:0px;
 }
+
+
 .infoDTDiv{
     cursor: zoom-in;
     position: fixed;
@@ -172,6 +185,9 @@ a:hover{
     left:-280px;
     visibility: hidden;
     transition-duration: 1s;
+    background-color: lightgray;
+    border-top-right-radius: 25px;
+    box-shadow: 2px 2px 4px silver;
 }
 
 .infoDTDiv_Visible{
@@ -179,10 +195,16 @@ a:hover{
     position: fixed;
     width: 300px;
     left:0px;
-    bottom:10px;
+    bottom:0px;
     transition-duration: 1s;
+    background-color: lightgray;
 }
 
+.infoDTDiv_Visible img{
+    right:10px !important;
+    top:10px !important;
+
+}
 
 .app_item {
     padding: 10px;

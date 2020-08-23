@@ -1,0 +1,12 @@
+.showEl{
+    opacity: 1;
+    transform: translate(650px, 0px);
+
+}
+
+a,a:visited{
+    text-decoration: none;
+    font-family: SMYLD-Digital;
+    padding: 20px;
+    color:black;
+}

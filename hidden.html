@@ -5,13 +5,14 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>SMYLD Coming Work</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src="https://cdn.jsdelivr.net/npm/smyld-lib-3d@0.1.36/dist/smyld-lib-3d.min.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='hidden.css'>
+    <script src="https://cdn.jsdelivr.net/npm/smyld-lib-3d@0.1.41/dist/smyld-lib-3d.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/smyld-lib-scroll-visible@1.0.0/main.min.js'   ></script>
     
 </head>
 <body>
-    <smyld-lib-3d-box settings="width:400px;height: 200px;length:150px;bg-front:red;" target="games/mario1/index.html">
-        <div slot="front" style="color: blue;padding-top: 30px;text-align: center;">
+    <smyld-lib-3d-box settings="width:400px;height: 200px;length:150px;bg-front:red;" target="games/mario1/index.html" shown="showEl">
+        <div slot="front" style="color: blue;padding-top: 30px;text-align: center;" >
             <img src="images/2d_icon.jpg" style="position: relative; cursor:pointer;width: 40px;height:40px;top:8px;">
             <div style="position: relative;top: 20px;">Mario Game V 1</div>
         </div>
@@ -19,7 +20,7 @@
             GO >> 
         </div>
     </smyld-lib-3d-box>
-    <smyld-lib-3d-box settings="width:400px;height: 200px;length:150px;bg-front:red;" target="https://www.youtube.com/watch?v=ktdpqA2YdBg">
+    <smyld-lib-3d-box settings="width:400px;height: 200px;length:150px;bg-front:red;" target="https://www.youtube.com/watch?v=ktdpqA2YdBg" shown="showEl">
         <div slot="front" style="color: blue;padding-top: 30px;text-align: center;">
             <img src="images/3d-icon2.png" style="position: relative; cursor:pointer;width: 40px;height:40px;top:8px;">
             <div style="position: relative;top: 20px;">Aminated Logo</div>

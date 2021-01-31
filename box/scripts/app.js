@@ -42,13 +42,22 @@ const projects =[
         'title': 'Libraries',
         'icon' : 'images/library.jpg',
         'name' : 'JS/TS Core',
-        'link' : 'https://mfjamil.github.io/smyld-lib-common/apps/ep',
+        'link' : 'https://mfjamil.github.io/smyld-lib-common/',
         'text' : 'Javascript/Typescrip library that helps the developer in their work on the SPA, contains some simple APIs, Syntax highlighted Logging to the console, elment visibility detection ... still more to come...',
-        'x'   : '70%',
-        'y'   : '20%'
+        'x'   : '80%',
+        'y'   : '60%'
+
+    },
+    {
+        'title': 'Libraries',
+        'icon' : 'images/library.jpg',
+        'name' : 'TS 3D',
+        'link' : 'https://mfjamil.github.io/smyld-lib-3d/',
+        'text' : 'TypeScript Based library that contains 3D web components that can be used in SPA applications, it is a work in progress, contains currently 3d Qubes',
+        'x'   : '0%',
+        'y'   : '60%'
 
     }
-
     ];
 
     var app = new Vue({

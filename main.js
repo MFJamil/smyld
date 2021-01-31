@@ -44,7 +44,7 @@ const data =[
         'title': 'Libraries',
         'icon' : 'library.jpg',
         'name' : 'TS 3D',
-        'link' : 'https://mfjamil.github.io/smyld-lib-3d/apps/ep',
+        'link' : 'https://mfjamil.github.io/smyld-lib-3d/',
         'text' : 'TypeScript Based library that contains 3D web components that can be used in SPA applications, it is a work in progress, contains currently 3d Qubes',
         'x'   : '70%',
         'y'   : '20%'

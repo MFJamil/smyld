@@ -37,6 +37,16 @@ const projects =[
         'x'   : '70%',
         'y'   : '20%'
 
+    },
+    {
+        'title': 'Libraries',
+        'icon' : 'images/library.jpg',
+        'name' : 'JS/TS Core',
+        'link' : 'https://mfjamil.github.io/smyld-lib-common/apps/ep',
+        'text' : 'Javascript/Typescrip library that helps the developer in their work on the SPA, contains some simple APIs, Syntax highlighted Logging to the console, elment visibility detection ... still more to come...',
+        'x'   : '70%',
+        'y'   : '20%'
+
     }
 
     ];

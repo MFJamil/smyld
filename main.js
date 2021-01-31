@@ -29,7 +29,28 @@ const data =[
         'name' : 'Entity Plotter',
         'link' : 'https://mfjamil.github.io/smyld-java/apps/ep',
         'text' : 'Java Swing Component that holds a full animated and funcitional entity diagram like flow charts and can be extended to plot UML diagrams'
+    },
+    {
+        'title': 'Libraries',
+        'icon' : 'library.jpg',
+        'name' : 'JS/TS Core',
+        'link' : 'https://mfjamil.github.io/smyld-lib-common/',
+        'text' : 'Javascript/Typescrip library that helps the developer in their work on the SPA, contains some simple APIs, Syntax highlighted Logging to the console, elment visibility detection ... still more to come...',
+        'x'   : '70%',
+        'y'   : '20%'
+
+    },
+    {
+        'title': 'Libraries',
+        'icon' : 'library.jpg',
+        'name' : 'TS 3D',
+        'link' : 'https://mfjamil.github.io/smyld-lib-3d/apps/ep',
+        'text' : 'TypeScript Based library that contains 3D web components that can be used in SPA applications, it is a work in progress, contains currently 3d Qubes',
+        'x'   : '70%',
+        'y'   : '20%'
+
     }
+
 
     ];
 
@@ -54,6 +75,7 @@ function drawWindowNew(colsPerRow){
     const tableEl = document.createElement("table");   
     tableEl.setAttribute('class','contentsTable');
     const rows = data.length / colsPerRow;
+    
     let dataIndex = 0; 
     Array(rows).fill(1).map(i => {
         const rowEl =  document.createElement("tr");

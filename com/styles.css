@@ -1,0 +1,256 @@
+/*
+Logo Colors:
+
+Blue   : 2a6099
+Green  : 127622
+Red    : f10d0c
+Yellow : e1b228
+*/
+
+@font-face{
+    font-family: "SMYLD-Digital";
+    src: url('../fonts/digital-7.ttf');
+
+
+}
+
+
+path {
+    fill: transparent;
+  }
+  
+
+body{
+    text-align: center;
+    font-size: 18px;
+}
+
+*{
+
+    box-sizing: border-box;
+}
+    
+
+.mainPageTitle{
+    font-family: SMYLD-Digital;
+    font-size: 26px; 
+    font-weight: bold; 
+    line-height: 32px;
+    margin-left: auto; margin-right: auto;
+}
+
+a,a:visited{
+    text-decoration: none;
+    font-family: SMYLD-Digital;
+    padding: 20px;
+    color:black;
+}
+
+a:hover{
+    color:red;
+}
+
+.app_group{
+    width: 300px;
+    height: 200px;
+    box-shadow: 2px 2px 4px silver;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-weight: bold;
+    margin-left: auto; margin-right: auto;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+    transition-duration: 1s;
+}
+
+.app_group_ext_big{
+    width: 600px;
+    height: 300px;
+}
+
+.app_group_ext_small{
+    width: 300px;
+    height: 300px;
+}
+
+.app_group_title{
+    font-family: Roboto, sans-serif;
+    color:#1d9add;
+    padding: 10px;
+}
+
+.inProgress{
+    font-family: Roboto, sans-serif;
+    color: red;
+    padding: 10px;
+    font-size: 12px;
+}
+
+
+
+.app_group_text{
+    top:50px;
+    width:500px;
+    height: 400px;
+    opacity: 0;
+    transition-duration: 0.5s;
+    font-family: Roboto, sans-serif;
+    color: red;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.app_group_text_show{
+    opacity: 1;
+    transition-duration: 3s;
+}
+
+
+.impressumDTDiv{
+    cursor: zoom-in;
+    position: fixed;
+    width: 300px;
+    bottom:-300px;
+    right:-280px;
+    height: 300px;
+    visibility: hidden;
+    transition-duration: 1s;
+    box-shadow: 2px 2px 4px silver;
+    background-color: lightgray;
+    border-top-left-radius: 25px;
+
+
+}
+
+.impressumDTDiv_Visible{
+    cursor: zoom-out;
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    right:0px;
+    bottom:0px;
+    transition-duration: 1s;
+}
+
+.impressumDTDiv_Visible img{
+    left:10px !important;
+    top:20px !important;
+
+}
+
+.infoMBDiv{
+    position: fixed;
+    width: 310px;
+    height: 305px;
+    top:-300px;
+    visibility: hidden;
+    left:-280px;
+    background-color: white;
+    border:2px solid #eee;
+    border-radius: 0px 0px 15px 0px; 
+    transition-duration: 1s;
+}
+
+.infoMBDiv_Show{
+    top:0px;
+    left:0px;
+}
+
+.impressumMBDiv{
+    position: fixed;
+    width: 300px;
+    height: 330px;
+    top:-300px;
+    right:-280px;
+    visibility: hidden;
+    background-color: white;
+    border:2px solid #eee;
+    border-radius: 0px 0px 0px 15px; 
+    transition-duration: 1s;
+}
+
+.impressumMBDiv_Show{
+    top:0px;
+    right:0px;
+}
+
+
+.infoDTDiv{
+    cursor: zoom-in;
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    bottom:-300px;
+    left:-280px;
+    visibility: hidden;
+    transition-duration: 1s;
+    background-color: lightgray;
+    border-top-right-radius: 25px;
+    box-shadow: 2px 2px 4px silver;
+}
+
+.infoDTDiv_Visible{
+    cursor: zoom-out;
+    position: fixed;
+    width: 300px;
+    left:0px;
+    bottom:0px;
+    transition-duration: 1s;
+    background-color: lightgray;
+}
+
+.infoDTDiv_Visible img{
+    right:10px !important;
+    top:10px !important;
+
+}
+
+.app_item {
+    padding: 10px;
+}
+.group_icon{
+   
+    padding: 10px;
+
+}
+.contentsDiv{
+    margin-left: auto; margin-right: auto;
+
+}
+.contentsTable{
+    margin-left: auto; margin-right: auto;
+    text-align: center;
+    width: 80%;
+    padding: 40px;
+}
+.contentsTable tr{
+    padding: 30px;
+
+}
+.contentsTable td{
+    padding: 30px;
+
+}
+
+
+#mobileTitleDiv{
+    position: fixed;
+    top:0px;
+    width:100%;
+    text-align: center;
+    height: 60px;
+    background-color: #DFE3EE;
+    left: 0px;
+
+}
+
+#pageLogo{
+    margin-left: auto; margin-right: auto;
+
+}
+#desktopDiv{
+    margin-left: auto; margin-right: auto;
+    text-align: center;
+
+}

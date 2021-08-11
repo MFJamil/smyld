@@ -31,7 +31,8 @@ Yellow : e1b228
   .container {
     padding: 2px 16px;
   }
-  .card img{
+
+  .card_img{
     width: 150px;
     height: 150px;
   }

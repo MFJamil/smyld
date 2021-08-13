@@ -17,7 +17,7 @@ Yellow : e1b228
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    
+    text-align: center;
     border-radius: 15px;
     padding-top: 10px;
     flex: 1;
@@ -33,10 +33,20 @@ Yellow : e1b228
   .container {
     padding: 2px 16px;
   }
+  .imgLink{
+    max-width: 200px;
+    margin: auto;
+    
+    padding:0px;
+
+  }
 
   .card img{
-    width: 150px;
-    height: 150px;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding:0px;
+    
   }
 path {
     fill: transparent;
@@ -65,7 +75,7 @@ body{
 a,a:visited{
     text-decoration: none;
     font-family: SMYLD-Digital;
-    padding: 20px;
+    
     color:black;
 }
 

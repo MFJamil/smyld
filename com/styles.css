@@ -17,11 +17,13 @@ Yellow : e1b228
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 300px;
+    
     border-radius: 15px;
     padding-top: 10px;
     flex: 1;
-    margin: 250px;
+    margin: auto;
+    position: relative;
+    max-width: 300px;
   }
   
   .card:hover {

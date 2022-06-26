@@ -5,8 +5,8 @@ const projects =[
         'name':'Spring Generator',
         'link': 'https://mfjamil.github.io/smyld-web/tools/build/spring_generator/',
         'text': 'For developers who needs to create a maven based full stack project that holds Spring Boot as a back-end and one of the frameworks (Angular,Vue or React) as a front-end',
-        'x'   : '10%',
-        'y'   : '20%'
+        'x'   : '0%',
+        'y'   : '40%'
     },
     {
         'title': 'Templates',
@@ -15,7 +15,7 @@ const projects =[
         'link' : 'https://mfjamil.github.io/smyld-web/angular/templates/SMYLDSimpleExplorer',
         'text' : 'For Angular developers who needs a project\'s template to speed up their work, this template is called "Simple Explorer"',
         'x'   : '20%',
-        'y'   : '60%'
+        'y'   : '40%'
 
     },
     /*
@@ -46,8 +46,8 @@ const projects =[
         'name' : 'JS/TS Core',
         'link' : 'https://mfjamil.github.io/smyld-lib-common/',
         'text' : 'Javascript/Typescrip library that helps the developer in their work on the SPA, contains some simple APIs, Syntax highlighted Logging to the console, elment visibility detection ... still more to come...',
-        'x'   : '80%',
-        'y'   : '60%'
+        'x'   : '60%',
+        'y'   : '40%'
 
     },
     {
@@ -56,8 +56,8 @@ const projects =[
         'name' : 'TS 3D',
         'link' : 'https://mfjamil.github.io/smyld-lib-3d/',
         'text' : 'TypeScript Based library that contains 3D web components that can be used in SPA applications, it is a work in progress, contains currently 3d Qubes',
-        'x'   : '0%',
-        'y'   : '60%'
+        'x'   : '80%',
+        'y'   : '40%'
 
     }
     ];

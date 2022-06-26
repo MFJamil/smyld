@@ -16,6 +16,7 @@ const data =[
         'link' : 'https://mfjamil.github.io/smyld-web/angular/templates/SMYLDSimpleExplorer',
         'text' : 'For Angular developers who needs a project\'s template to speed up their work, this template is called "Simple Explorer"'
     },
+    /*
     {
         'title': 'Frameworks',
         'icon' : 'java_45.png',
@@ -30,6 +31,7 @@ const data =[
         'link' : 'https://mfjamil.github.io/smyld-java/apps/ep',
         'text' : 'Java Swing Component that holds a full animated and funcitional entity diagram like flow charts and can be extended to plot UML diagrams'
     },
+    */
     {
         'title': 'Libraries',
         'icon' : 'library.jpg',

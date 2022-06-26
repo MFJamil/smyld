@@ -18,6 +18,7 @@ const projects =[
         'y'   : '60%'
 
     },
+    /*
     {
         'title': 'Frameworks',
         'icon' : 'images/java_45.png',
@@ -38,6 +39,7 @@ const projects =[
         'y'   : '20%'
 
     },
+    */
     {
         'title': 'Libraries',
         'icon' : 'images/library.jpg',
